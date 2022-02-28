@@ -1,4 +1,4 @@
-package kz.arctan.minesweaper.game.domain.usecase
+package kz.arctan.minesweaper.game.domain.util
 
 import kz.arctan.minesweaper.game.domain.models.Cell
 

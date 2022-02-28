@@ -1,4 +1,4 @@
-package kz.arctan.minesweaper.ui.theme
+package kz.arctan.minesweaper.common.pesentation.theme
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Shapes

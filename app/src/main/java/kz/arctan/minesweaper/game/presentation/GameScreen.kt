@@ -17,8 +17,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import kz.arctan.minesweaper.game.domain.models.Cell
-import kz.arctan.minesweaper.game.domain.usecase.PlayerClickCheckUseCase
-import kz.arctan.minesweaper.game.domain.usecase.PlaygroundGenerationUseCase
+import kz.arctan.minesweaper.game.domain.util.PlayerClickCheckUseCase
+import kz.arctan.minesweaper.game.domain.util.PlaygroundGenerationUseCase
 
 @Composable
 @Preview

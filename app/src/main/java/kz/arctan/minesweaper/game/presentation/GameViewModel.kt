@@ -1,7 +1,7 @@
 package kz.arctan.minesweaper.game.presentation
 
 import androidx.lifecycle.ViewModel
-import kz.arctan.minesweaper.game.domain.usecase.PlaygroundGenerationUseCase
+import kz.arctan.minesweaper.game.domain.util.PlaygroundGenerationUseCase
 
 class GameViewModel(
     playgroundGenerationUseCase: PlaygroundGenerationUseCase,
