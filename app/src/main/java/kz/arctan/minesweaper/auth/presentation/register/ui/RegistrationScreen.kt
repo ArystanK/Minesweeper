@@ -1,4 +1,4 @@
-package kz.arctan.minesweaper.auth.presentation.ui
+package kz.arctan.minesweaper.auth.presentation.register.ui
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.*
@@ -10,11 +10,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
+import kz.arctan.minesweaper.auth.presentation.register.RegistrationViewModel
 import kz.arctan.minesweaper.common.pesentation.BeautifulTextField
 
 @Composable
 @Preview
-fun RegistrationScreen() {
+fun RegistrationScreenPreview() {
     var username by remember { mutableStateOf("") }
     var firstName by remember { mutableStateOf("") }
     var lastName by remember { mutableStateOf("") }
@@ -27,6 +29,20 @@ fun RegistrationScreen() {
         onLastNameChange = { lastName = it },
         onNextButtonClick = {},
         onBackButtonClick = {}
+    )
+}
+
+@Composable
+fun RegistrationScreen(registrationViewModel: RegistrationViewModel, navController: NavController) {
+    RegistrationView(
+        username = registrationViewModel.email.value,
+        onUsernameChange = { registrationViewModel.email.value = it },
+        firstName = registrationViewModel.firstName.value,
+        onFirstNameChange = { registrationViewModel.firstName.value = it },
+        lastName = registrationViewModel.lastName.value,
+        onLastNameChange = { registrationViewModel.lastName.value = it },
+        onNextButtonClick = { /*TODO*/ },
+        onBackButtonClick = { navController.popBackStack() }
     )
 }
 

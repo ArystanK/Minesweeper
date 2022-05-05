@@ -4,7 +4,7 @@ import kz.arctan.minesweaper.game.domain.models.Cell
 import kotlin.random.Random
 
 class PlaygroundGenerationUseCase {
-    fun invoke(numberOfBombs: Int, width: Int, height: Int): Array<Array<Cell>> {
+    operator fun invoke(numberOfBombs: Int, width: Int, height: Int): Array<Array<Cell>> {
         val playground = Array(height) { Array(width) { Cell('0') } }
         repeat(numberOfBombs) {
             var columnId = Random.nextInt(width)

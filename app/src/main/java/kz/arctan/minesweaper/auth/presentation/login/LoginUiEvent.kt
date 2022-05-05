@@ -1,4 +1,4 @@
-package kz.arctan.minesweaper.auth.domain.util
+package kz.arctan.minesweaper.auth.presentation.login
 
 sealed class LoginUiEvent {
     data class Navigate(val route: String) : LoginUiEvent()
@@ -8,6 +8,4 @@ sealed class LoginUiEvent {
     ) : LoginUiEvent()
 
     object LoginResultLoading : LoginUiEvent()
-
-    object LoginResultInitial : LoginUiEvent()
 }

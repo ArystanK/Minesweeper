@@ -1,4 +1,4 @@
-package kz.arctan.minesweaper.auth.presentation.ui
+package kz.arctan.minesweaper.auth.presentation.register.ui
 
 import androidx.compose.runtime.Composable
 

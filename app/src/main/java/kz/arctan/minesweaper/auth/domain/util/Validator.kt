@@ -24,9 +24,6 @@ class Password(private val content: Pair<String, String>) {
     }
 }
 
-// I don't remember why you exist
-fun Password(password: String) = Password(password to password)
-
 class Email(private val content: String) {
     fun validate(): ValidationResult {
         return ValidationResult.EmailValidationResult(
@@ -34,6 +31,5 @@ class Email(private val content: String) {
                 content
             ).matches()
         )
-
     }
 }

@@ -12,7 +12,6 @@ import kz.arctan.minesweaper.auth.domain.usecases.LoginUseCase
 import kz.arctan.minesweaper.auth.domain.util.Email
 import kz.arctan.minesweaper.common.domain.model.ActionResult
 import kz.arctan.minesweaper.common.domain.util.Routes
-import kz.arctan.minesweaper.auth.domain.util.LoginUiEvent
 import javax.inject.Inject
 
 @HiltViewModel
@@ -61,7 +60,7 @@ class LoginViewModel @Inject constructor(
                         sendUiEvent(LoginUiEvent.LoginResultLoading)
                     }
                     ActionResult.Success -> {
-                        sendUiEvent(LoginUiEvent.Navigate(Routes.CHOOSE_GAME_MODE_SCREEN))
+                        sendUiEvent(LoginUiEvent.Navigate(Routes.GAME_SCREEN))
                     }
                 }
             }

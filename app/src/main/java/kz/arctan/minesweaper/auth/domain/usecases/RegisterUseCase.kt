@@ -1,16 +1,16 @@
 package kz.arctan.minesweaper.auth.domain.usecases
 
 import kotlinx.coroutines.flow.flow
-import kz.arctan.minesweaper.auth.common.EmailAlreadyExistsException
-import kz.arctan.minesweaper.auth.common.UnableToRegisterException
-import kz.arctan.minesweaper.auth.common.UnableToSaveToDatabaseException
+import kz.arctan.minesweaper.auth.data.EmailAlreadyExistsException
+import kz.arctan.minesweaper.auth.data.UnableToRegisterException
+import kz.arctan.minesweaper.auth.data.UnableToSaveToDatabaseException
 import kz.arctan.minesweaper.auth.domain.AuthRepository
 import kz.arctan.minesweaper.auth.domain.util.Email
 import kz.arctan.minesweaper.auth.domain.util.Password
 import kz.arctan.minesweaper.common.domain.model.ActionResult
 import javax.inject.Inject
 
-class RegisterUseCase(private val authRepository: AuthRepository) {
+class RegisterUseCase @Inject constructor(private val authRepository: AuthRepository) {
     operator fun invoke(
         email: String,
         password: String,
