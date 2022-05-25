@@ -100,7 +100,8 @@ fun Playground(
                             }
                         },
                         markAsBomb = {
-                            playgroundData[rowId][colId].markedAsBomb.value = true
+                            playgroundData[rowId][colId].markedAsBomb.value =
+                                !playgroundData[rowId][colId].markedAsBomb.value
                         }
                     )
 
